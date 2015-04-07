@@ -2,8 +2,10 @@ var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var winston = require('winston');
+var env = process.env.NODE_ENV || 'development';
+var config = require('./config.' + env);
 
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     res.sendFile(__dirname + '/static/index.html');
 });
 
