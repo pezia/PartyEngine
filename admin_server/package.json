@@ -8,6 +8,7 @@
         "type": "git",
         "url": "https://github.com/pezia/PartyEngine.git"
     },
+    "private": true,
     "license": "MIT",
     "author": {
         "name": "Zsolt Petrik",
@@ -31,5 +32,9 @@
         "karma-mocha": "^0.1.10",
         "karma-spec-reporter": "0.0.18",
         "mocha": "^2.2.1"
+    },
+    "scripts": {
+        "test": "mocha",
+        "start": "node app.js"
     }
 }
